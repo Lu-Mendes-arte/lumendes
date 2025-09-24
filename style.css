@@ -495,6 +495,23 @@ nav ul li button.active {
   overflow: hidden;
 }
 
+.youtube-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.youtube-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 @media (max-width: 1024px) {
   .title {
     opacity: 1;
@@ -731,4 +748,5 @@ strong {
 .laranja-bold {
   font-family: 'lu mendes bold', 'open sans', sans-serif;
   color: var(--laranja);
+
 }
