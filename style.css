@@ -1,0 +1,734 @@
+@font-face {
+  font-family: 'lu mendes light';
+  src: url('font/lumendes-light.woff2') format('woff2'),
+    url('font/lumendes-light.woff') format('woff'),
+    url('font/lumendes-light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lu mendes regular';
+  src: url('font/lumendes-regular.woff2') format('woff2'),
+    url('font/lumendes-regular.woff') format('woff'),
+    url('font/lumendes-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lu mendes bold';
+  src: url('font/lumendes-bold.woff2') format('woff2'),
+    url('font/lumendes-bold.woff') format('woff'),
+    url('font/lumendes-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  margin: 0;
+  background-color: var(--branco);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* titulo conteúdo expandido E texto grande do conteudo extendido */
+h1 {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  color: var(--preto);
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: left;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* texto conteudo expandido e da pagina sobre */
+h2 {
+  font-family: 'lu mendes light', 'open sans', sans-serif;
+  color: var(--preto);
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: left;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* texto formulario de contato */
+h3 {
+  font-family: 'lu mendes light', 'open sans', sans-serif;
+  font-size: 30px;
+  color: var(--preto);
+}
+
+/* titulo rodapé */
+h4 {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  font-size: 30px;
+  color: var(--preto);
+  font-weight: bold;
+}
+
+/* texto rodapé */
+h5 {
+  font-family: 'lu mendes light', 'open sans', sans-serif;
+  font-size: 25px;
+  color: var(--preto);
+  line-height: 1.5;
+}
+
+/* barra final do rodapé */
+h6 {
+  font-family: 'lu mendes light', 'open sans', sans-serif;
+  font-size: 16px;
+  color: var(--preto);
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+:root {
+  --branco: #f2ecdd;
+  --preto: #3a3837;
+  --amarelo: #fdc219;
+  --verdeagua: #23918e;
+  --laranja: #db6516;
+  --rosa: #e63366;
+  --roxo: #5E2780;
+}
+
+.header {
+  background-color: var(--amarelo);
+  padding: 0 0 30px 0;
+}
+
+.logo-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos da Barra de Navegação */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-top: 10px solid var(--amarelo);
+  border-bottom: 10px solid var(--amarelo);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--amarelo);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  float: none;
+  padding: 0 10px;
+}
+
+nav ul li button,
+.btn-sobre,
+.btn-contato,
+.dropbtn {
+  background-color: var(--branco);
+  color: var(--preto);
+  padding: 14px 16px;
+  border: 1px solid var(--preto);
+  cursor: pointer;
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  font-size: 20px;
+}
+
+nav ul li button:hover,
+nav ul li button.active {
+  background-color: var(--verdeagua);
+  color: var(--branco);
+}
+
+/* botão rede social */
+.svg-icon {
+  display: block !important;
+  visibility: visible !important;
+  width: 50px;
+  height: auto;
+  margin: 0 10px;
+}
+
+/* Estilos do submenu */
+.dropdown-content {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  display: none;
+  position: absolute;
+  background-color: var(--branco);
+  width: 100%;
+  z-index: 1;
+  white-space: normal;
+  text-align: center;
+  left: 0;
+  transform: none;
+  padding: 5px 5px;
+}
+
+.dropdown-content a {
+  color: var(--preto);
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--branco);
+  color: var(--verdeagua);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+/* Estilo para o botão "Portfolio" */
+.dropbtn {
+  white-space: nowrap;
+}
+
+.btn-sobre:hover,
+.btn-sobre.active {
+  background-color: var(--laranja);
+  color: var(--branco);
+}
+
+.btn-contato:hover,
+.btn-contato.active {
+  background-color: var(--rosa);
+  color: var(--branco);
+}
+
+@media screen and (min-width: 537px) and (max-width: 1100px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav ul li {
+    padding: 0 5px;
+    flex: 0 0 auto;
+  }
+
+  nav ul li button,
+  .btn-sobre,
+  .btn-contato,
+  .dropbtn {
+    width: 120px;
+    height: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+
+  .dropdown-content a {
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+
+}
+
+@media screen and (max-width: 536px) {
+  nav ul {
+    justify-content: space-around;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  nav ul li {
+    flex: 1 1 auto;
+    text-align: center;
+    float: none;
+    padding: 0 3px;
+  }
+
+  /* Ajuste para todos os botões */
+  nav ul li button,
+  .btn-sobre,
+  .btn-contato,
+  .dropbtn {
+    font-size: 14px;
+    padding: 10px 12px;
+    width: 85%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Ajuste para a svg de redes sociais */
+  .svg-icon {
+    width: 40px;
+    height: auto;
+  }
+
+  .dropdown-content a {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+}
+
+/* galeria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 15px;
+  width: 80%;
+  max-width: 1400px;
+  margin: 20px auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 400 / 315;
+}
+
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.title {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  background-color: var(--branco);
+  color: var(--preto);
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 10px;
+  border: 1px solid var(--preto);
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s, background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.thumbnail:hover .title {
+  opacity: 1;
+}
+
+.title:hover {
+  background-color: var(--verdeagua);
+  color: var(--branco);
+  border-color: var(--preto);
+}
+
+/* Ajustes para diferentes tamanhos de tela */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .thumbnail .title {
+    font-size: 14px;
+  }
+}
+
+.expanded-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.expanded-content .content-box {
+  background-color: var(--branco);
+  position: relative;
+  width: 100%;
+  max-width: 1420px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.expanded-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.expanded-content video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.close-btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--branco);
+  z-index: 1000;
+}
+
+.close-btn:hover {
+  color: var(--amarelo);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    opacity: 1;
+  }
+
+  .close-btn {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 0;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--branco);
+    z-index: 1000;
+  }
+}
+
+/* rodapé */
+footer {
+  background-color: var(--branco);
+  color: var(--preto);
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1400px;
+}
+
+.footer-column {
+  flex: 1;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.footer-icons {
+  display: inline-flex;
+  justify-content: left;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-icons img:hover {
+  opacity: 0.6;
+}
+
+/* Estilo para o SVG */
+.footer-column svg {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  transition: fill 0.3s ease;
+}
+
+/* Estilos para a linha abaixo das colunas */
+.footer-line {
+  background-color: var(--amarelo);
+  color: var(--preto);
+  text-align: center;
+  padding: 1px 0;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 1240px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+
+  .footer-line p {
+    font-size: 14px;
+  }
+
+  .footer-column:last-child img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+  .container-Newsletter {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* pagina sobre */
+.container-sobre {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.imagem-sobre {
+  width: 100%;
+  height: auto;
+  max-width: 1400px;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Página de contato */
+.texto-contato {
+  font-family: 'Lu Mendes regular', 'Open Sans', sans-serif;
+  background-color: var(--branco);
+  padding: 25px;
+  max-width: 700px;
+  text-align: left;
+  margin: auto auto;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+.container-formulario {
+  background-color: var(--amarelo);
+  padding: 20px;
+  width: 90%;
+  border: 1px solid var(--preto);
+}
+
+/* Inputs e textarea */
+.container-formulario input[type="text"],
+.container-formulario input[type="email"],
+.container-formulario input[type="tel"],
+.container-formulario textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--preto);
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  background-color: var(--branco);
+  color: var(--preto);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  outline: none;
+}
+
+/* Alinha os elementos do formulário */
+.container-formulario form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Botão enviar */
+input[type=submit] {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  font-size: 16px;
+  padding: 10px 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  background-color: var(--branco);
+  color: var(--preto);
+  border: 1px solid var(--preto);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-end;
+}
+
+/* Estilo do botão enviar */
+input[type=submit]:hover {
+  background-color: var(--rosa);
+  color: var(--branco);
+  border: 1px solid var(--preto);
+}
+
+@media (max-width: 1024px) {
+  input[type=submit] {
+    background-color: var(--rosa);
+    color: var(--branco);
+    border: 1px solid var(--preto);
+  }
+}
+
+/* Fontes negrito e coloridas*/
+strong {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  font-weight: 700;
+}
+
+.rosa-bold {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  color: var(--rosa);
+}
+
+.laranja-bold {
+  font-family: 'lu mendes bold', 'open sans', sans-serif;
+  color: var(--laranja);
+}

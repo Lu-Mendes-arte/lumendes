@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Se o arquivo ou diretório existe, não faça nada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Se existe um arquivo .html para a URL requisitada, sirva ele
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
