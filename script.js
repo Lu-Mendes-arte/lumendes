@@ -137,18 +137,30 @@ window.onclick = function (event) {
     }
 };
 
-// formulario de contato //
+// mensagens do formulário
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    const statusDiv = document.getElementById('mensagem-status');
     const formData = new FormData(form);
-    const response = await fetch('send.php', {
-        method: 'POST',
-        body: formData
-    });
-    const result = await response.text();
-    document.getElementById('mensagem-status').innerHTML = result;
-    if (result.includes('✅')) {
-        form.reset();
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            statusDiv.innerHTML = "✅ Mensagem enviada com sucesso!";
+            form.reset();
+        } else {
+            statusDiv.innerHTML = "❌ Erro ao enviar a mensagem. Tente novamente ou envie diretamente para lumendesarte.contato@gmail.com";
+        }
+    } catch (error) {
+        statusDiv.innerHTML = "❌ Erro ao enviar a mensagem. Tente novamente ou envie diretamente para lumendesarte.contato@gmail.com";
+        console.error(error);
     }
 });
