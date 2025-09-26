@@ -75,27 +75,27 @@
     </h3>
 
     <div class="container-formulario ">
-      <form id="contactForm" action="send.php" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="digite seu nome" title="digite seu nome" required>
+<form id="contactForm" action="https://getform.io/f/bmdyroxa" method="POST">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" placeholder="digite seu nome" title="digite seu nome" required>
 
-        <label for="email">E-mail:</label>
-        <input type="text" id="email" name="email" placeholder="digite seu e-mail" title="Digite um e-mail válido"
-          required>
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" placeholder="digite seu e-mail" title="Digite um e-mail válido" required>
 
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" placeholder="digite seu telefone" title="digite seu telefone">
+  <label for="telefone">Telefone:</label>
+  <input type="text" id="telefone" name="telefone" placeholder="digite seu telefone" title="digite seu telefone">
 
-        <label for="assunto">Assunto:</label>
-        <input type="text" name="assunto" placeholder="digite o tema central da mensagem" title="digite seu telefone"
-          required />
+  <label for="assunto">Assunto:</label>
+  <input type="text" id="assunto" name="assunto" placeholder="digite o tema central da mensagem" title="digite o tema central da mensagem" required />
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="assunto" name="assunto" placeholder="escreva sua mensagem..." style="height:200px"
-          title="escreva sua mensagem" required></textarea>
+  <label for="mensagem">Mensagem:</label>
+  <textarea id="mensagem" name="mensagem" placeholder="escreva sua mensagem..." style="height:200px" title="escreva sua mensagem" required></textarea>
+  
+ <!-- add hidden Honeypot input to prevent spams -->
+  <input type="hidden" name="_gotcha" style="display:none !important">
 
-        <input type="submit" value="Enviar" title="clique para enviar sua mensagem">
-      </form>
+  <input type="submit" value="Enviar" title="clique para enviar sua mensagem">
+</form>
       <div id="mensagem-status"></div>
     </div>
   </div>
